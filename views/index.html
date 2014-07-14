@@ -1,19 +1,26 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Portfolio</title>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/bootstrap-theme.min.css">
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
 </head>
 <body>
-  <h1>Index</h1>
+<h1>Index</h1>
 
 {% for project in projects %}
 <span>
 <p>{{ project.name }}</p>
-<a href="show?id={{ project.key.id()}}">Show</a> | <a href="edit?id={{ project.key.id()}}">Edit</a> | <a href="destroy?id={{ project.key.id()}}">Destroy</a>
+<a href="show?id={{ project.key.id()}}">Show</a> | <a href="edit?id={{ project.key.id()}}">Edit</a> | <a
+        href="destroy?id={{ project.key.id()}}">Destroy</a>
+<a></a>
 </span>
-<br />
-<br />
+<br/>
+<br/>
 {% endfor %}
 
 

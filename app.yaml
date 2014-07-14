@@ -5,9 +5,6 @@ api_version: 1
 threadsafe: true
 
 handlers:
-- url: /.*
-  script: main.application
-  secure: optional
 
 - url: /new
   script: main.application
@@ -24,10 +21,12 @@ handlers:
   login: admin
   secure: optional
 
-- url: /css
+- url: /stylesheets
+  mime_type: text/css
   static_dir: static/css
 
 - url: /js
+  mime_type: text/javascript
   static_dir: static/js
 
 - url: /img
@@ -36,6 +35,10 @@ handlers:
 - url: /favicon\.ico
   static_files: static/favicon.ico
   upload: static/favicon\.ico
+
+- url: /.*
+  script: main.application
+  secure: optional
 
 libraries:
 - name: webapp2
