@@ -19,7 +19,6 @@ class Index(webapp2.RequestHandler):
 
 
 class Show(webapp2.RequestHandler):
-
     def get(self):
         id = self.request.get('id')
         project = Project.get_by_id(int(id))
